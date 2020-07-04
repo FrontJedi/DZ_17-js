@@ -12,10 +12,10 @@
         // Задание 1:
         // Дан массив с элементами 'a', 'b', 'c', 'd', 'e'.С помощью цикла for выведите все эти элементы на экран.
 
-        const arr = ['a', 'b', 'c', 'd', 'e']
+        const arrAlphabet = ['a', 'b', 'c', 'd', 'e']
 
-        for (let i = 0; i <= arr.lenght; i++) {
-            document.write(arr[i])
+        for (let i = 0; i < arrAlphabet.length; i++) {
+            console.log(`Задание 1: ${arrAlphabet[i]}`);
         }
 
 
@@ -24,29 +24,107 @@
         // Задание 2:
         // Дан массив с элементами 1, 2, 3, 4, 5. С помощью цикла for и оператора if выведите в консоль нечетные элементы массива.
 
+        const arrNumber = [1, 2, 3, 4, 5]
+
+        for (let i = 0; i < arrNumber.length; i++) {
+            if (arrNumber[i] % 2 != 0) {
+                console.log(`Задание 2: ${i}`);
+            }
+        }
+
+
+
         // Задание 3:
         // Дан массив с элементами 1, 2, 3, 4, 5. С помощью цикла for найдите произведение элементов этого массива.
+        let result = 1;
+        for (let i = 1; i < arrNumber.length; i++) {
+            result *= arrNumber[i];
+            console.log(`Задание 3: ${result}`);
+        }
+
+
+
+
 
         // Задание 4:
         // Дан массив с элементами 2, 5, 9, 15, 1, 4. С помощью цикла for и оператора if выведите в консоль те элементы массива, которые больше 3 - х, но меньше 10.
 
+        const arrNumberTwo = [2, 5, 9, 15, 1, 4];
+
+        for (let i = 0; i < arrNumberTwo.length; i++) {
+            if (arrNumberTwo[i] > 3 && arrNumberTwo[i] < 10) {
+                console.log(`Задание 4: ${arrNumberTwo[i]}`);
+            }
+        }
+
+
+
         // Задание 5:
         // Дан массив arr(заполните любыми значениями).Найдите среднее арифметическое его элементов(сумма делить на количество).
+
+        let sum = '';
+        let avirage;
+        for (let i = 0; i < arrNumberTwo.length; i++) {
+            sum += arrNumberTwo[i];
+            let avirage = sum / arrNumberTwo.length;
+            console.log(`Задание 5: ${avirage}`);
+
+        }
+
+
+
 
         // Задание 6:
         // Дан массив числами, например: [10, 20, 30, 50, 235, 3000].Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
 
+        let arrNumberThree = [10, 20, 30, 50, 235, 3000];
+        for (let i = 0; i < arrNumberThree.length; i++) {
+            if (String(arrNumberThree[i])[0] == 1 || String(arrNumberThree[i])[0] == 2 || String(arrNumberThree[i])[0] == 5) {
+                console.log(`Задание 6: ${arrNumberThree[i]}`);
+            }
+        }
+
+
+
+
         // Задание 7:
         // Составьте массив дней недели.С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
+        // const weeekDay = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturnday', 'Sunday'];
+
+        let arrWeek = [`Понедельник`, `Вторник`, `Среда`, `Четверг`, `Пятница`, `Суббота`, `Воскресенье`];
+        for (let i = 0; i < arrWeek.length; i++) {
+            if (i === 5 || i === 6) {
+                document.write(`<strong> ${arrWeek[i]} </strong>`)
+            } else {
+                document.write(`${arrWeek[i]} `)
+            }
+        }
 
         // Задание 8:
         // Напишите функцию removeDuplicates(arr), которая возвращает массив, в котором удалены повторяющиеся элементы из массива arr(игнорируйте чувствительность к регистру).
+
+        let arrBank = [`MEGABANK`, `MEGABANK`, `PRIVATBANK`, `PRIVATBANK`, `SBERBANK`, `SBERBANK`]
+        function removeDuplicates(arrBank) {
+            const bank = [];
+            console.log(bank);
+        }
+
+
+
 
         // Задание 9:
         // Напишите функцию countIdentic(arr), которая возвращает количество повторяющихся элементов в массиве.
 
         // Задание 10:
         // Найдите минимальный и максимальный элемент в массиве.
+
+        const arrFour = [10, 20, 30, 50, 235, 3000];
+        let min = Math.min.apply(null, arrFour);
+        let max = Math.max.apply(null, arrFour);
+        console.log(`Min = ${min}; Max = ${max}`);
+    
+
+
     </script>
 </body>
 
