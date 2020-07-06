@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DZ_17 Olek</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         const arrAlphabet = ['a', 'b', 'c', 'd', 'e']
 
         for (let i = 0; i < arrAlphabet.length; i++) {
-            console.log(`Задание 1: ${arrAlphabet[i]}`);
+            document.write(`${arrAlphabet[i]} `);
         }
 
 
@@ -28,9 +28,10 @@
 
         for (let i = 0; i < arrNumber.length; i++) {
             if (arrNumber[i] % 2 != 0) {
-                console.log(`Задание 2: ${i}`);
+                console.log(`Задание 2: ${arrNumber[i]}`);
             }
         }
+
 
 
 
@@ -39,9 +40,8 @@
         let result = 1;
         for (let i = 1; i < arrNumber.length; i++) {
             result *= arrNumber[i];
-            console.log(`Задание 3: ${result}`);
         }
-
+        console.log(`Задание 3: ${result}`);
 
 
 
@@ -63,13 +63,13 @@
         // Дан массив arr(заполните любыми значениями).Найдите среднее арифметическое его элементов(сумма делить на количество).
 
         let sum = '';
-        let avirage;
+
         for (let i = 0; i < arrNumberTwo.length; i++) {
             sum += arrNumberTwo[i];
-            let avirage = sum / arrNumberTwo.length;
-            console.log(`Задание 5: ${avirage}`);
-
         }
+        let avirage = sum / arrNumberTwo.length;
+        console.log(`Задание 5: ${avirage}`);
+
 
 
 
@@ -94,7 +94,7 @@
         let arrWeek = [`Понедельник`, `Вторник`, `Среда`, `Четверг`, `Пятница`, `Суббота`, `Воскресенье`];
         for (let i = 0; i < arrWeek.length; i++) {
             if (i === 5 || i === 6) {
-                document.write(`<strong> ${arrWeek[i]} </strong>`)
+                document.write(`<strong> ${arrWeek[i]} </strong>`);
             } else {
                 document.write(`${arrWeek[i]} `)
             }
@@ -103,11 +103,6 @@
         // Задание 8:
         // Напишите функцию removeDuplicates(arr), которая возвращает массив, в котором удалены повторяющиеся элементы из массива arr(игнорируйте чувствительность к регистру).
 
-        let arrBank = [`MEGABANK`, `MEGABANK`, `PRIVATBANK`, `PRIVATBANK`, `SBERBANK`, `SBERBANK`]
-        function removeDuplicates(arrBank) {
-            const bank = [];
-            console.log(bank);
-        }
 
 
 
@@ -115,14 +110,29 @@
         // Задание 9:
         // Напишите функцию countIdentic(arr), которая возвращает количество повторяющихся элементов в массиве.
 
+
         // Задание 10:
         // Найдите минимальный и максимальный элемент в массиве.
 
-        const arrFour = [10, 20, 30, 50, 235, 3000];
-        let min = Math.min.apply(null, arrFour);
-        let max = Math.max.apply(null, arrFour);
+        const arr = [10, 20, 30, 50, 235, 300];
+        let min = Math.min.apply(null, arr);
+        let max = Math.max.apply(null, arr);
         console.log(`Min = ${min}; Max = ${max}`);
-    
+
+        // const arr = [1, 2, 4, 6, 8, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+        // function countIdentic(arr) {
+        //     for (let i = 0; i < arr.length; ++i) {
+        //         if (arr[i] > arr[i + 1]) {
+        //             max = arr[i];
+        //             console.log(max);
+        //         }
+
+        //         min = myArray[i];
+        //         console.log(min);
+        //     }
+        // }
+        // countIdentic(arr);
 
 
     </script>
